@@ -1,0 +1,66 @@
+:root {
+  --background: #07100f;
+  --surface: #0d1a18;
+  --surface-raised: #142521;
+  --surface-soft: #0b1513;
+  --text: #edf2ed;
+  --muted: #9aada6;
+  --accent: #e05a32;
+  --accent-light: #ff8a55;
+  --gold: #cf6240;
+  --gold-light: #ffd2bd;
+  --cyan: #69a895;
+  --border: rgba(150, 178, 168, 0.16);
+  --border-gold: rgba(224, 90, 50, 0.3);
+  --nav-theme: 14 73% 54%;
+  --nav-theme-light: 18 100% 67%;
+}
+
+body {
+  background:
+    linear-gradient(rgba(105, 168, 149, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(105, 168, 149, 0.028) 1px, transparent 1px),
+    radial-gradient(circle at 50% -8%, rgba(224, 90, 50, 0.14), transparent 34rem),
+    var(--background);
+  background-size: 48px 48px, 48px 48px, auto, auto;
+}
+
+h1,
+h2,
+h3,
+.brand-lockup {
+  font-family: "Arial Narrow", "Roboto Condensed", Inter, ui-sans-serif, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.site-header {
+  background: rgba(5, 13, 12, 0.95);
+}
+
+.brand-lockup__mark {
+  border-radius: 4px;
+  background: rgba(10, 24, 21, 0.92);
+}
+
+.button--steam,
+.button--primary {
+  color: #100806;
+}
+
+.warhounds-guide-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 900px) {
+  .warhounds-guide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .warhounds-guide-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

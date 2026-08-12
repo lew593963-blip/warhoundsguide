@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Warhounds Guide</title>
+  <desc id="desc">Warhounds Guide branding with a tactical map grid and shield.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1c19"/>
+      <stop offset="1" stop-color="#030807"/>
+    </linearGradient>
+    <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse">
+      <path d="M52 0H0V52" fill="none" stroke="#8aa69d" stroke-opacity=".09"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="180" cy="315" r="112" fill="#07100f" stroke="#e05a32" stroke-width="7"/>
+  <path d="m180 218 77 30v53c0 52-31 86-77 108-46-22-77-56-77-108v-53l77-30Z" fill="#10211e" stroke="#d7e0d9" stroke-opacity=".7" stroke-width="5"/>
+  <path d="m120 267 27 91h18l15-45 15 45h18l27-91h-23l-16 57-14-42h-14l-14 42-16-57h-23Z" fill="#e05a32"/>
+  <text x="345" y="286" fill="#f1f5f1" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="800" letter-spacing="4">WARHOUNDS</text>
+  <text x="350" y="360" fill="#e05a32" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" letter-spacing="12">GUIDE</text>
+  <text x="350" y="428" fill="#9eb0a9" font-family="Arial, Helvetica, sans-serif" font-size="24" letter-spacing="2">SQUADS · BASE · WEAPONS · COMBAT</text>
+  <path d="M350 470h690" stroke="#8aa69d" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M1014 112v70M979 147h70" stroke="#e05a32" stroke-width="4"/>
+</svg>

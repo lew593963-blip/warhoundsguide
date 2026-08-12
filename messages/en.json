@@ -1,0 +1,101 @@
+{
+  "common": {
+    "skip": "Skip to content",
+    "language": "Language",
+    "externalLink": "Opens in a new tab"
+  },
+  "nav": {
+    "home": "Home",
+    "guides": "Guides",
+    "beginnerGuide": "Beginner Guide",
+    "squadGuide": "Squad & Classes",
+    "baseUpgrades": "Base Upgrades",
+    "weaponsGuide": "Weapons & Combat",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "play": "Play on Steam"
+  },
+  "hero": {
+    "eyebrow": "Independent Fan Guide · Launch Evidence",
+    "title": "Command With a Plan",
+    "description": "Evidence-led Warhounds guides for squad roles, tactical positioning, PMC management, equipment, and campaign decisions.",
+    "stats": [
+      "Released Aug 11, 2026",
+      "Turn-Based Tactics",
+      "Single-Player",
+      "Windows PC"
+    ],
+    "primaryCta": "Start the Beginner Guide",
+    "secondaryCta": "Play on Steam"
+  },
+  "start": {
+    "eyebrow": "First Guide Cluster",
+    "title": "Four Focused Field Manuals",
+    "description": "The launch library answers high-value player questions without splitting overlapping classes and combat intent into thin pages.",
+    "read": "Read guide",
+    "cards": [
+      {
+        "number": "1",
+        "title": "Beginner Guide",
+        "description": "Connect first-campaign squad choices, tactical turns, base decisions, and consequential relationships."
+      },
+      {
+        "number": "2",
+        "title": "Squad & Classes",
+        "description": "Use the five confirmed classes, veterans, recruits, and equipment as an adaptable role-coverage system."
+      },
+      {
+        "number": "3",
+        "title": "Base Upgrades",
+        "description": "Prioritize readiness, coverage, sustainment, intelligence, operations, finances, and allied relationships."
+      },
+      {
+        "number": "4",
+        "title": "Weapons & Combat",
+        "description": "Choose equipment by job and combine tools, firing lines, destructible cover, high ground, and overwatch."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About the Game",
+    "title": "What is Warhounds?",
+    "paragraphs": [
+      "Warhounds is a turn-based tactical strategy game developed by Everplay DMCC and published by Brightika, Inc. In a 2035 East African conflict, you command a private military company through field operations and a connected strategic layer.",
+      "The official material highlights five classes, veterans and recruits, destructible battlefields, true ballistics, tactical tools, base management, factions, intelligence, covert operations, and choices that can change missions, equipment, and support."
+    ],
+    "stats": [
+      {"label": "Developer", "value": "Everplay DMCC"},
+      {"label": "Publisher", "value": "Brightika, Inc."},
+      {"label": "Release", "value": "August 11, 2026"},
+      {"label": "Platform", "value": "Windows PC · Steam"},
+      {"label": "Mode", "value": "Single-player"}
+    ],
+    "cta": "Read the Beginner Guide"
+  },
+  "finalCta": {
+    "eyebrow": "Confirmed Systems, Clear Limits",
+    "title": "Prepare the Next Operation",
+    "description": "Start with the campaign loop, then use the specialist guides without relying on fabricated tiers, stat tables, or mission steps.",
+    "primary": "Read Beginner Guide",
+    "secondary": "Play on Steam"
+  },
+  "footer": {
+    "about": "Warhounds Guide is an independent fan-made guide site. It is not affiliated with Everplay DMCC, Brightika, Inc., or Valve.",
+    "description": "Evidence-led guides for Warhounds squads, base management, weapons, tools, and tactical combat.",
+    "guides": "Field Manuals",
+    "official": "Official Links",
+    "legal": "Site Information",
+    "discord": "Official Community",
+    "steam": "Play Warhounds on Steam",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "Independent fan-made resource. Warhounds and related marks belong to their respective owners."
+  },
+  "notFound": {
+    "eyebrow": "Operation Not Found",
+    "title": "Page Not Found",
+    "description": "This route does not exist. Return to the command hub and continue with a current evidence-checked guide.",
+    "cta": "Back to Home"
+  }
+}

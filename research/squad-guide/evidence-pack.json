@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.1.0",
+  "page_id": "squad-guide",
+  "observed_on": "2026-08-12",
+  "sources": [
+    {
+      "source_id": "official-steam",
+      "evidence_class": "OFFICIAL",
+      "title": "Warhounds on Steam",
+      "url": "https://store.steampowered.com/app/3929470/Warhounds/?l=english",
+      "publisher": "Everplay DMCC / Brightika, Inc.",
+      "published_at": null,
+      "observed_at": "2026-08-12T17:00:00.000+08:00",
+      "version_boundary": "English Steam listing observed after the August 11, 2026 release"
+    },
+    {
+      "source_id": "official-site",
+      "evidence_class": "OFFICIAL",
+      "title": "Warhounds Official Site",
+      "url": "https://warhounds.game/",
+      "publisher": "Warhounds",
+      "published_at": null,
+      "observed_at": "2026-08-12T17:05:00.000+08:00",
+      "version_boundary": "Official feature page observed August 12, 2026"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "squad-five-classes",
+      "statement": "Warhounds names five classes: Assault, Specialist, Sniper, Machine Gunner, and Grenadier.",
+      "source_ids": ["official-steam"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "squad-veterans",
+      "statement": "The official site describes ten unique veteran mercenaries with traits, stories, and abilities.",
+      "source_ids": ["official-site"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "squad-recruits",
+      "statement": "The roster can also be expanded with recruits who grow through combat and training.",
+      "source_ids": ["official-site"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "squad-loadouts",
+      "statement": "Soldiers can be upgraded and equipped, and the official combat description presents different weapons, gear, abilities, and tactical tools.",
+      "source_ids": ["official-steam", "official-site"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "squad-factions",
+      "statement": "The official site describes five factions with distinct soldiers and tactics, while Steam states that relationships affect allied support.",
+      "source_ids": ["official-steam", "official-site"],
+      "evidence_class": "OFFICIAL",
+      "volatile": true
+    }
+  ],
+  "unknowns": [
+    "The checked official sources do not establish a universal best-class tier list.",
+    "Exact class skill trees, recruit stat ranges, optimal squad size, and veteran rankings are not asserted.",
+    "The guide's squad patterns are role-coverage frameworks rather than fixed meta compositions."
+  ],
+  "contradictions": []
+}

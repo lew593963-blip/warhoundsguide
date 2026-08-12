@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.1.0",
+  "page_id": "base-upgrades",
+  "observed_on": "2026-08-12",
+  "sources": [
+    {
+      "source_id": "official-steam",
+      "evidence_class": "OFFICIAL",
+      "title": "Warhounds on Steam",
+      "url": "https://store.steampowered.com/app/3929470/Warhounds/?l=english",
+      "publisher": "Everplay DMCC / Brightika, Inc.",
+      "published_at": null,
+      "observed_at": "2026-08-12T17:00:00.000+08:00",
+      "version_boundary": "English Steam listing observed after the August 11, 2026 release"
+    },
+    {
+      "source_id": "official-site",
+      "evidence_class": "OFFICIAL",
+      "title": "Warhounds Official Site",
+      "url": "https://warhounds.game/",
+      "publisher": "Warhounds",
+      "published_at": null,
+      "observed_at": "2026-08-12T17:05:00.000+08:00",
+      "version_boundary": "Official feature page observed August 12, 2026"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "base-recruit-upgrade",
+      "statement": "The base supports recruiting soldiers, upgrading them, and purchasing equipment.",
+      "source_ids": ["official-steam"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "base-management",
+      "statement": "The player manages logistics, finances, medical care, and downtime from the base.",
+      "source_ids": ["official-steam"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "base-allies",
+      "statement": "The strategic layer includes working with allied factions and managing relationships.",
+      "source_ids": ["official-steam", "official-site"],
+      "evidence_class": "OFFICIAL",
+      "volatile": true
+    },
+    {
+      "claim_id": "base-operations",
+      "statement": "Intelligence and covert operations are explicitly named parts of the command layer.",
+      "source_ids": ["official-steam"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "base-consequences",
+      "statement": "Campaign decisions can alter missions, equipment access, and which allies provide support.",
+      "source_ids": ["official-steam"],
+      "evidence_class": "OFFICIAL",
+      "volatile": true
+    }
+  ],
+  "unknowns": [
+    "The checked sources do not publish the complete facility tree, costs, prerequisites, or a universal optimal upgrade order.",
+    "The guide labels its priority ladder as a planning framework derived from confirmed systems.",
+    "Patch-sensitive balance and economy values require current-build verification before publication as facts."
+  ],
+  "contradictions": []
+}

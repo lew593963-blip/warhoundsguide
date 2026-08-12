@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.1.0",
+  "page_id": "weapons-guide",
+  "observed_on": "2026-08-12",
+  "sources": [
+    {
+      "source_id": "official-steam",
+      "evidence_class": "OFFICIAL",
+      "title": "Warhounds on Steam",
+      "url": "https://store.steampowered.com/app/3929470/Warhounds/?l=english",
+      "publisher": "Everplay DMCC / Brightika, Inc.",
+      "published_at": null,
+      "observed_at": "2026-08-12T17:00:00.000+08:00",
+      "version_boundary": "English Steam listing observed after the August 11, 2026 release"
+    },
+    {
+      "source_id": "official-site",
+      "evidence_class": "OFFICIAL",
+      "title": "Warhounds Official Site",
+      "url": "https://warhounds.game/",
+      "publisher": "Warhounds",
+      "published_at": null,
+      "observed_at": "2026-08-12T17:05:00.000+08:00",
+      "version_boundary": "Official feature page observed August 12, 2026"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "weapons-arsenal",
+      "statement": "Official material describes a broad selection of weapons, gear, abilities, and upgradable equipment.",
+      "source_ids": ["official-steam", "official-site"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "weapons-tools",
+      "statement": "Named tactical tools include drones, combat scanners, smoke, and optical camouflage.",
+      "source_ids": ["official-steam"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "weapons-ballistics",
+      "statement": "Steam describes true ballistics and explicitly contrasts the combat with fake random-number outcomes.",
+      "source_ids": ["official-steam"],
+      "evidence_class": "OFFICIAL",
+      "volatile": true
+    },
+    {
+      "claim_id": "weapons-terrain",
+      "statement": "Cover can be destroyed, high ground matters, and the battlefields support vertical play.",
+      "source_ids": ["official-steam", "official-site"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "weapons-overwatch",
+      "statement": "Warhounds uses cone-based overwatch and visible lines of fire as tactical systems.",
+      "source_ids": ["official-steam"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    }
+  ],
+  "unknowns": [
+    "The checked official sources do not provide a complete launch weapon list, damage table, armor formula, range table, or universal best-weapon ranking.",
+    "The guide uses weapon-role categories and tactical questions instead of fabricated numerical tiers.",
+    "Any claim about exact hit resolution needs current-build testing beyond this evidence pack."
+  ],
+  "contradictions": []
+}

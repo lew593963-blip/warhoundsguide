@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Warhounds Guide mark</title>
+  <desc id="desc">An angular W inside a tactical shield and target ring.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#132421"/>
+      <stop offset="1" stop-color="#050b0a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff8a55"/>
+      <stop offset="1" stop-color="#d63f27"/>
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="245" fill="url(#bg)" stroke="#e05a32" stroke-width="10"/>
+  <circle cx="256" cy="256" r="204" fill="none" stroke="#8aa69d" stroke-opacity=".32" stroke-width="3" stroke-dasharray="8 18"/>
+  <path d="M256 68 408 128v105c0 103-61 171-152 215C165 404 104 336 104 233V128L256 68Z" fill="#0b1715" stroke="#d7e0d9" stroke-opacity=".65" stroke-width="8"/>
+  <path d="m143 165 52 181h35l26-90 26 90h35l52-181h-42l-31 112-25-83h-30l-25 83-31-112h-42Z" fill="url(#accent)"/>
+  <path d="M137 382h238M256 97v35M83 256h35M394 256h35" fill="none" stroke="#e8efea" stroke-opacity=".72" stroke-width="7"/>
+  <circle cx="256" cy="256" r="13" fill="#f4d6c4"/>
+</svg>

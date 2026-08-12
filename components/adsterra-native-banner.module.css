@@ -1,0 +1,25 @@
+.banner {
+  width: min(100% - 32px, 780px);
+  min-width: 0;
+  margin: 72px auto 0;
+  overflow-x: clip;
+}
+
+.slot {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.slot :global(iframe),
+.slot :global(img),
+.slot :global(table) {
+  max-width: 100%;
+}
+
+@media (max-width: 620px) {
+  .banner {
+    margin-top: 52px;
+  }
+}

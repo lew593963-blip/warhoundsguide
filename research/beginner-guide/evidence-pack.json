@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.1.0",
+  "page_id": "beginner-guide",
+  "observed_on": "2026-08-12",
+  "sources": [
+    {
+      "source_id": "official-steam",
+      "evidence_class": "OFFICIAL",
+      "title": "Warhounds on Steam",
+      "url": "https://store.steampowered.com/app/3929470/Warhounds/?l=english",
+      "publisher": "Everplay DMCC / Brightika, Inc.",
+      "published_at": null,
+      "observed_at": "2026-08-12T17:00:00.000+08:00",
+      "version_boundary": "English Steam listing observed after the August 11, 2026 release"
+    },
+    {
+      "source_id": "official-site",
+      "evidence_class": "OFFICIAL",
+      "title": "Warhounds Official Site",
+      "url": "https://warhounds.game/",
+      "publisher": "Warhounds",
+      "published_at": null,
+      "observed_at": "2026-08-12T17:05:00.000+08:00",
+      "version_boundary": "Official feature page observed August 12, 2026"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "beginner-loop",
+      "statement": "Warhounds combines turn-based tactical battles with a strategic layer where the player commands a private military company.",
+      "source_ids": ["official-steam", "official-site"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "beginner-classes",
+      "statement": "The five named classes are Assault, Specialist, Sniper, Machine Gunner, and Grenadier.",
+      "source_ids": ["official-steam"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "beginner-base",
+      "statement": "Base management includes recruitment, upgrading soldiers, buying equipment, logistics, finances, medical care, downtime, faction relationships, intelligence, and covert operations.",
+      "source_ids": ["official-steam"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "beginner-combat",
+      "statement": "Official combat features include lines of fire, destructible cover, high ground, true ballistics, drones, scanners, smoke, optical camouflage, and cone-based overwatch.",
+      "source_ids": ["official-steam", "official-site"],
+      "evidence_class": "OFFICIAL",
+      "volatile": false
+    },
+    {
+      "claim_id": "beginner-choices",
+      "statement": "Campaign choices can change missions, available gear, and allied support.",
+      "source_ids": ["official-steam"],
+      "evidence_class": "OFFICIAL",
+      "volatile": true
+    }
+  ],
+  "unknowns": [
+    "The current sources do not publish a complete tutorial sequence or exact first-hour upgrade order.",
+    "Exact economy formulas, weapon damage values, and hidden difficulty scaling are not established here.",
+    "Recommendations in the guide are strategic inferences from confirmed systems, not claims about a single mandatory build."
+  ],
+  "contradictions": []
+}
