@@ -9,8 +9,9 @@ Independent, evidence-led guides for the 2026 turn-based tactical strategy game 
 - Run ID: `warhounds-preview-20260812-r2`
 - Template: Game Guide Template materialized from immutable source commit `80580d50bed7fe7f361b939451e48237b87b2b90`
 - Target production domain: `warhoundsguide.online`
-- Production deployment and domain binding: not authorized by this run
-- GA, AdSense, and Adsterra: disabled
+- Production deployment and domain binding: managed as a Warhounds-only release
+- GA4: enabled only after explicit consent, using a Warhounds-only environment variable
+- AdSense and Adsterra: disabled
 
 The public site source includes page-level evidence packs, plans, and SEO briefs under `research/`.
 

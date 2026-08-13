@@ -11,12 +11,17 @@ describe("Warhounds production target config", () => {
     expect(rootConfig.links.repository).toBe("https://github.com/lew593963-blip/warhoundsguide");
   });
 
-  it("ships analytics and every advertising integration disabled", () => {
+  it("enables only the isolated Warhounds analytics integration", () => {
     expect(rootConfig.integrations).toEqual({
-      analytics: {enabled: false},
+      analytics: {
+        enabled: true,
+        measurementIdEnv: "NEXT_PUBLIC_GA_MEASUREMENT_ID",
+      },
       adsense: {enabled: false},
       adsterra: {enabled: false},
     });
-    expect(JSON.stringify(rootConfig.integrations)).not.toMatch(/G-|ca-pub-|atOptions/);
+    expect(JSON.stringify(rootConfig.integrations)).not.toMatch(
+      /G-RY8XD6LH7X|ca-pub-|atOptions/,
+    );
   });
 });

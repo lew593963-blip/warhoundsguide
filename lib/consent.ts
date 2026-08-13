@@ -35,7 +35,7 @@ export const consentContent: Record<Locale, ConsentContent> = {
   en: {
     title: "Privacy choices",
     description:
-      "Necessary browser storage remembers this choice. Optional analytics or advertising loads only if a future reviewed site configuration enables it and you consent.",
+      "Necessary browser storage remembers this choice. Google Analytics loads only after you accept optional analytics; advertising remains disabled.",
     accept: "Accept optional",
     reject: "Reject optional",
     necessary: "Necessary only",

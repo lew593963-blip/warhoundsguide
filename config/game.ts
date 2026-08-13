@@ -39,7 +39,7 @@ export const rootConfig = rootConfigSchema.parse({
         privacy: {
           title: "Privacy Policy — Warhounds Guide",
           description:
-            "Read how Warhounds Guide handles hosting logs, browser storage, external links, and disabled analytics and advertising integrations.",
+            "Read how Warhounds Guide handles hosting logs, consent-gated analytics, browser storage, external links, and disabled advertising.",
         },
         terms: {
           title: "Terms of Service — Warhounds Guide",
@@ -75,7 +75,10 @@ export const rootConfig = rootConfigSchema.parse({
     repository: "https://github.com/lew593963-blip/warhoundsguide",
   },
   integrations: {
-    analytics: {enabled: false},
+    analytics: {
+      enabled: true,
+      measurementIdEnv: "NEXT_PUBLIC_GA_MEASUREMENT_ID",
+    },
     adsense: {enabled: false},
     adsterra: {enabled: false},
   },

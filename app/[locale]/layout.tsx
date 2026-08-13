@@ -1,4 +1,3 @@
-import {GoogleAnalytics} from "@next/third-parties/google";
 import type {Metadata} from "next";
 import {hasLocale} from "next-intl";
 import {setRequestLocale} from "next-intl/server";
@@ -6,6 +5,7 @@ import {notFound} from "next/navigation";
 import Script from "next/script";
 
 import {CookieConsent} from "@/components/cookie-consent";
+import {ConsentGatedGoogleAnalytics} from "@/components/consent-gated-google-analytics";
 import {SiteFooter} from "@/components/site-footer";
 import {SiteHeader} from "@/components/site-header";
 import {rootConfig} from "@/config";
@@ -108,7 +108,9 @@ export default async function LocaleLayout({
           />
         ) : null}
       </body>
-      {gaMeasurementId ? <GoogleAnalytics gaId={gaMeasurementId} /> : null}
+      {gaMeasurementId ? (
+        <ConsentGatedGoogleAnalytics gaId={gaMeasurementId} />
+      ) : null}
     </html>
   );
 }

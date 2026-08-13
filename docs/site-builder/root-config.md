@@ -10,7 +10,7 @@
 - Brand mark: `/brand/warhounds-mark.svg`
 - Default social image: `/brand/warhounds-og.svg`
 - Repository: `https://github.com/lew593963-blip/warhoundsguide`
-- Analytics: disabled
+- Analytics: enabled behind explicit consent; measurement ID supplied only through `NEXT_PUBLIC_GA_MEASUREMENT_ID`
 - AdSense: disabled
 - Adsterra: disabled
 - Sitemap: config-driven canonical URLs only

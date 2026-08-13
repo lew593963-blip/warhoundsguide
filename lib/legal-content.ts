@@ -13,10 +13,10 @@ export type LegalContent = {
 
 export const legalContent: Record<Locale, LegalContent> = {
   en: {
-    updated: "Last updated: August 12, 2026",
+    updated: "Last updated: August 13, 2026",
     privacyTitle: "Privacy Policy",
     privacyIntro:
-      "This policy explains how the independent Warhounds Guide handles technical delivery, local browser storage, external links, and currently disabled analytics and advertising integrations.",
+      "This policy explains how the independent Warhounds Guide handles technical delivery, local browser storage, consent-gated analytics, external links, and disabled advertising integrations.",
     privacySections: [
       {
         title: "Information collected",
@@ -24,11 +24,11 @@ export const legalContent: Record<Locale, LegalContent> = {
       },
       {
         title: "Browser storage and consent",
-        body: "The current configuration does not enable Google Analytics, Google AdSense, or Adsterra and does not load their scripts. The reusable technical template includes consent controls for a future reviewed configuration, but this build does not ask for or store an optional advertising or analytics choice.",
+        body: "Necessary local browser storage records whether you accept or reject optional analytics. Google Analytics is not loaded unless you actively accept. You can reopen Privacy choices from the footer and change that decision. Google AdSense and Adsterra remain disabled.",
       },
       {
         title: "Analytics and advertising status",
-        body: "No site-specific analytics measurement ID, AdSense account or slot, or Adsterra placement is configured. If an integration is added later, this policy and the consent interface must be reviewed before its script is enabled.",
+        body: "If you accept, this site loads its own Google Analytics 4 web stream to measure page views, navigation, engagement, approximate geography, device and referral information. Google processes this data under its policies. The site does not configure an AdSense publisher, ad slot, or Adsterra placement, and no advertising script is enabled.",
       },
       {
         title: "External links",
@@ -53,7 +53,7 @@ export const legalContent: Record<Locale, LegalContent> = {
       },
       {
         title: "External services and future integrations",
-        body: "The current build contains external links but no active analytics or advertising integration. Warhounds Guide does not control external content, purchases, accounts, availability, or privacy practices, and a link is not an endorsement.",
+        body: "The site contains external links and optional consent-gated Google Analytics, while advertising integrations remain disabled. Warhounds Guide does not control external content, purchases, accounts, availability, or privacy practices, and a link is not an endorsement.",
       },
       {
         title: "Changes and contact",
