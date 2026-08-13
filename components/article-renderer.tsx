@@ -3,11 +3,11 @@ import rehypeSlug from "rehype-slug";
 import type {ComponentType} from "react";
 import remarkGfm from "remark-gfm";
 
+import {rootConfig, type RootConfig} from "@/config";
 import {
   buildArticleJsonLd,
   buildBreadcrumbJsonLd,
 } from "@/lib/article-metadata";
-import {rootConfig} from "@/config";
 import type {ContentEntry} from "@/lib/content-registry";
 
 import {AdsterraPlacement} from "./adsterra-placement";
@@ -43,11 +43,24 @@ function AdsterraInlineTwo() {
   );
 }
 
-const NO_AD_COMPONENTS: Record<string, ComponentType> = {};
+function DisabledAdsterraPlacement() {
+  return null;
+}
+
+const NO_AD_COMPONENTS: Record<string, ComponentType> = {
+  AdsterraInlineOne: DisabledAdsterraPlacement,
+  AdsterraInlineTwo: DisabledAdsterraPlacement,
+};
 const AD_COMPONENTS: Record<string, ComponentType> = {
   AdsterraInlineOne,
   AdsterraInlineTwo,
 };
+
+export function createArticleAdComponents(
+  integration: RootConfig["integrations"]["adsterra"],
+) {
+  return integration.enabled ? AD_COMPONENTS : NO_AD_COMPONENTS;
+}
 
 export function ArticleRenderer({
   entry,
@@ -56,7 +69,7 @@ export function ArticleRenderer({
   jsonLdHeadline,
 }: ArticleRendererProps) {
   const adsterra = rootConfig.integrations.adsterra;
-  const adComponents = adsterra.enabled ? AD_COMPONENTS : NO_AD_COMPONENTS;
+  const adComponents = createArticleAdComponents(adsterra);
 
   return (
     <>

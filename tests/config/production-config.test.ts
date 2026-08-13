@@ -3,7 +3,20 @@ import {resolve} from "node:path";
 
 import {describe, expect, it} from "vitest";
 
-import {rootConfig} from "@/config";
+import {rootConfig, rootConfigSchema} from "@/config";
+
+type MutableEnabledConfig = {
+  integrations: {
+    adsterra: {
+      enabled: true;
+      placements: Record<string, Record<string, unknown>>;
+    };
+  };
+};
+
+function mutableConfig(): MutableEnabledConfig {
+  return structuredClone(rootConfig) as unknown as MutableEnabledConfig;
+}
 
 describe("Warhounds production target config", () => {
   it("owns the correct game, domain, legal identity, and repository", () => {
@@ -73,5 +86,31 @@ describe("Warhounds production target config", () => {
     expect(adsTxt).toBe(
       "google.com, pub-4904968441728478, DIRECT, f08c47fec0942fa0\n",
     );
+  });
+
+  it("rejects duplicate Adsterra identities", () => {
+    const candidate = mutableConfig();
+    candidate.integrations.adsterra.placements.inlineBannerTwo.unitId =
+      candidate.integrations.adsterra.placements.inlineBannerOne.unitId;
+
+    expect(rootConfigSchema.safeParse(candidate).success).toBe(false);
+  });
+
+  it("rejects insecure Adsterra scripts and incorrect viewport policies", () => {
+    const insecure = mutableConfig();
+    insecure.integrations.adsterra.placements.inlineBannerOne.scriptUrl =
+      "http://example.com/invoke.js";
+    expect(rootConfigSchema.safeParse(insecure).success).toBe(false);
+
+    const wrongViewport = mutableConfig();
+    wrongViewport.integrations.adsterra.placements.desktopRail.viewport = "ALL";
+    expect(rootConfigSchema.safeParse(wrongViewport).success).toBe(false);
+  });
+
+  it("rejects an enabled integration with a missing placement", () => {
+    const candidate = mutableConfig();
+    delete candidate.integrations.adsterra.placements.nativeBanner;
+
+    expect(rootConfigSchema.safeParse(candidate).success).toBe(false);
   });
 });

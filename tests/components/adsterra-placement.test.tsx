@@ -111,7 +111,7 @@ describe("AdsterraPlacement", () => {
   });
 
   it("responds to consent changes and removes a previously mounted frame", () => {
-    const {rerender} = render(
+    render(
       <AdsterraPlacement placement={displayFixture} position="inline" />,
     );
 
@@ -119,14 +119,12 @@ describe("AdsterraPlacement", () => {
       window.localStorage.setItem(CONSENT_STORAGE_KEY, "granted");
       window.dispatchEvent(new Event(CONSENT_CHANGE_EVENT));
     });
-    rerender(<AdsterraPlacement placement={displayFixture} position="inline" />);
     expect(screen.getByTitle("Advertisement content")).toBeInTheDocument();
 
     act(() => {
       window.localStorage.setItem(CONSENT_STORAGE_KEY, "denied");
       window.dispatchEvent(new Event(CONSENT_CHANGE_EVENT));
     });
-    rerender(<AdsterraPlacement placement={displayFixture} position="inline" />);
     expect(screen.queryByTitle("Advertisement content")).not.toBeInTheDocument();
   });
 });
