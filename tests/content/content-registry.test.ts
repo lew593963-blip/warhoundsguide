@@ -24,4 +24,28 @@ describe("first guide cluster", () => {
       expect(entry.frontmatter.description.length, entry.slug).toBeLessThanOrEqual(180);
     }
   });
+
+  it("places two ad markers after the second and fourth complete H2 sections", () => {
+    for (const entry of contentRegistry) {
+      const tokens = entry.source.split(/\n(?=## |<AdsterraInline)/);
+      const h2Indexes = tokens
+        .map((token, index) => (token.startsWith("## ") ? index : -1))
+        .filter((index) => index >= 0);
+      const firstAd = tokens.findIndex((token) =>
+        token.startsWith("<AdsterraInlineOne"),
+      );
+      const secondAd = tokens.findIndex((token) =>
+        token.startsWith("<AdsterraInlineTwo"),
+      );
+
+      expect(
+        entry.source.match(/<AdsterraInline(?:One|Two) \/>/g),
+        entry.slug,
+      ).toHaveLength(2);
+      expect(firstAd, entry.slug).toBeGreaterThan(h2Indexes[1]);
+      expect(firstAd, entry.slug).toBeLessThan(h2Indexes[2]);
+      expect(secondAd, entry.slug).toBeGreaterThan(h2Indexes[3]);
+      expect(secondAd, entry.slug).toBeLessThan(h2Indexes[4]);
+    }
+  });
 });

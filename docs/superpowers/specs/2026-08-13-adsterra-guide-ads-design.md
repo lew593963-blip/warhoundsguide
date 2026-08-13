@@ -16,7 +16,7 @@ copied or reused.
 Create one Adsterra website with these settings:
 
 - Domain: `warhoundsguide.online`
-- Website category: Games
+- Website category: Other (the provider form offered no Games category)
 - Adult ads: disabled
 - Enabled formats: Native Banner and Banner only
 - Disabled formats: Popunder, Smartlink, and Social Bar
@@ -32,9 +32,10 @@ provider identity and statistics:
 5. A Native Banner for the end-of-article placement.
 
 The exact Banner sizes must be selected from the sizes offered by the Adsterra
-account UI. The top unit must fit the main desktop content column, each inline
-unit must fit a 390-pixel mobile viewport without scaling the page, and the rail
-unit must fit a 300-pixel desktop rail. No size or provider URL may be guessed.
+account UI. The provider permits only one unit per size for a website, so the
+two independent inline positions use 300x250 and 160x300. The top unit uses
+728x90 and the rail uses 160x600. All fit their intended columns without
+scaling the page. No size or provider URL may be guessed.
 
 Provider-generated public placement identifiers and script URLs may be stored
 in the Warhounds root configuration. Credentials, account tokens, payout data,
@@ -124,12 +125,11 @@ The schema must reject insecure script URLs, missing placement identities,
 duplicate script or placement IDs, and any enabled configuration that omits
 one of the five approved placements.
 
-Keep the current `AdsterraNativeBanner` component as the Native placement
-boundary and introduce one focused display-banner component that accepts one
-of the four typed Banner placements. Provider globals, if required by the exact
-generated snippet, stay inside the component instance and are created only
-after consent. Every placement uses a unique DOM and script identity. No
-provider script is added to the root layout.
+Move the existing Native behavior into one focused shared placement component
+that accepts either a typed Banner or Native placement. Provider globals stay
+inside a sandboxed placement frame and are created only after consent. Every
+placement uses a unique DOM and script identity. No provider script is added to
+the root layout.
 
 Each guide source marks explicit insertion points after its second and fourth
 complete H2 sections. The guide shell owns the desktop Leaderboard and rail,

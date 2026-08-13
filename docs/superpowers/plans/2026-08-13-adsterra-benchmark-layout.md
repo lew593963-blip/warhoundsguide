@@ -11,7 +11,7 @@
 ## Global Constraints
 
 - Project scope is only `/Users/chenchen/Documents/ChatGPT/warhoundsguide` plus the Warhounds release observation files in the Factory.
-- Adsterra website domain is exactly `warhoundsguide.online`; category is Games; Adult Ads is disabled.
+- Adsterra website domain is exactly `warhoundsguide.online`; category is Other because the provider offered no Games category; Adult Ads is disabled.
 - Only Banner and Native Banner formats are enabled. Popunder, Smartlink, Social Bar, bottom adhesion, and Anti-Adblock remain disabled.
 - Desktop width is `>= 1200px`: one top Leaderboard, two inline Banners, one sticky rail Banner, and one final Native Banner, at most five placements.
 - Width `< 1200px`: only two inline Banners and one final Native Banner, at most three placements.
@@ -58,7 +58,7 @@ In Adsterra Publishers → Websites, choose Add website and submit exactly:
 
 ```text
 Website: warhoundsguide.online
-Website category: Games
+Website category: Other (the provider form offers no Games category)
 Adult ads: off
 Initial formats: Banner, Native Banner
 Forbidden formats left unchecked: Popunder, Smartlink, Social Bar
@@ -68,7 +68,9 @@ After submission, read back the exact website ID, domain, category, Adult Ads st
 
 - [ ] **Step 2: Create five independent units and select only offered sizes**
 
-Create and name the units so provider statistics remain position-specific:
+Create five independent units so provider statistics remain position-specific.
+The provider supplies its own unit names, so record a stable local placement
+name alongside each exact provider name:
 
 ```text
 Warhounds Desktop Top Leaderboard
@@ -116,7 +118,7 @@ type AdsterraProviderEvidence = {
   website: {
     id: string; // exact visible Warhounds website ID
     domain: "warhoundsguide.online";
-    category: "Games";
+    category: "Other";
     adult_ads: false;
     review_state: string; // exact visible provider state
   };
@@ -146,7 +148,7 @@ Run:
 ```bash
 jq -e '
   .website.domain == "warhoundsguide.online" and
-  .website.category == "Games" and
+  .website.category == "Other" and
   .website.adult_ads == false and
   ([.forbidden_formats[]] | all(. == false)) and
   ([.placements[].unit_id] | length == (unique | length)) and
