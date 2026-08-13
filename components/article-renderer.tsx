@@ -2,7 +2,10 @@ import {MDXRemote} from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
-import {buildArticleJsonLd} from "@/lib/article-metadata";
+import {
+  buildArticleJsonLd,
+  buildBreadcrumbJsonLd,
+} from "@/lib/article-metadata";
 import type {ContentEntry} from "@/lib/content-registry";
 
 import {ArticleShell, EvidenceBadge} from "./article-shell";
@@ -26,6 +29,7 @@ export function ArticleRenderer({
       <JsonLd
         data={buildArticleJsonLd(entry, {headline: jsonLdHeadline})}
       />
+      <JsonLd data={buildBreadcrumbJsonLd(entry)} />
       <ArticleShell
         locale={entry.locale}
         frontmatter={entry.frontmatter}

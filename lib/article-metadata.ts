@@ -60,3 +60,26 @@ export function buildArticleJsonLd(
     author: {"@type": "Organization", name: rootConfig.site.name},
   };
 }
+
+export function buildBreadcrumbJsonLd(entry: ContentEntry) {
+  const canonical = `${rootConfig.site.url}${localizedRoute(entry)}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: rootConfig.site.name,
+        item: rootConfig.site.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: entry.frontmatter.navigationLabel,
+        item: canonical,
+      },
+    ],
+  };
+}

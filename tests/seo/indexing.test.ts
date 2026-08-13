@@ -2,7 +2,11 @@ import {describe, expect, it} from "vitest";
 
 import robots from "@/app/robots";
 import sitemap from "@/app/sitemap";
-import {buildArticleJsonLd, buildArticleMetadata} from "@/lib/article-metadata";
+import {
+  buildArticleJsonLd,
+  buildArticleMetadata,
+  buildBreadcrumbJsonLd,
+} from "@/lib/article-metadata";
 import {contentRegistry} from "@/lib/content-registry";
 import {siteConfig} from "@/lib/site";
 
@@ -35,6 +39,28 @@ describe("canonical indexing and structured data", () => {
       const jsonLd = buildArticleJsonLd(entry);
       expect(jsonLd["@type"]).toBe("Article");
       expect(jsonLd.mainEntityOfPage).toBe(`${siteConfig.url}${entry.route}`);
+    }
+  });
+
+  it("gives every guide a canonical BreadcrumbList", () => {
+    for (const entry of contentRegistry) {
+      const breadcrumb = buildBreadcrumbJsonLd(entry);
+
+      expect(breadcrumb["@type"]).toBe("BreadcrumbList");
+      expect(breadcrumb.itemListElement).toEqual([
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Warhounds Guide",
+          item: "https://warhoundsguide.online",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: entry.frontmatter.navigationLabel,
+          item: `${siteConfig.url}${entry.route}`,
+        },
+      ]);
     }
   });
 
