@@ -51,12 +51,18 @@ export default async function LocaleLayout({
   const gaMeasurementId = analytics.enabled
     ? process.env[analytics.measurementIdEnv]
     : undefined;
+  const adsenseVerification = adsense.enabled
+    ? {metaName: adsense.metaName, publisherId: adsense.publisherId}
+    : adsense.siteVerification;
 
   return (
     <html lang={locale} data-theme="dark" data-scroll-behavior="smooth">
       <head>
-        {adsense.enabled ? (
-          <meta name={adsense.metaName} content={adsense.publisherId} />
+        {adsenseVerification ? (
+          <meta
+            name={adsenseVerification.metaName}
+            content={adsenseVerification.publisherId}
+          />
         ) : null}
         {hasGoogleIntegration ? (
           <Script

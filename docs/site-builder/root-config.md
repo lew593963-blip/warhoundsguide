@@ -11,7 +11,7 @@
 - Default social image: `/brand/warhounds-og.svg`
 - Repository: `https://github.com/lew593963-blip/warhoundsguide`
 - Analytics: enabled behind explicit consent; measurement ID supplied only through `NEXT_PUBLIC_GA_MEASUREMENT_ID`
-- AdSense: disabled
+- AdSense: non-executable site-verification meta plus account-level `ads.txt`; ad loading disabled
 - Adsterra: disabled
 - Sitemap: config-driven canonical URLs only
 - Robots: allow crawl; target canonical host and sitemap

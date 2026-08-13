@@ -79,7 +79,13 @@ export const rootConfig = rootConfigSchema.parse({
       enabled: true,
       measurementIdEnv: "NEXT_PUBLIC_GA_MEASUREMENT_ID",
     },
-    adsense: {enabled: false},
+    adsense: {
+      enabled: false,
+      siteVerification: {
+        publisherId: "ca-pub-4904968441728478",
+        metaName: "google-adsense-account",
+      },
+    },
     adsterra: {enabled: false},
   },
 });

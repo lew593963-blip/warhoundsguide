@@ -24,11 +24,11 @@ export const legalContent: Record<Locale, LegalContent> = {
       },
       {
         title: "Browser storage and consent",
-        body: "Necessary local browser storage records whether you accept or reject optional analytics. Google Analytics is not loaded unless you actively accept. You can reopen Privacy choices from the footer and change that decision. Google AdSense and Adsterra remain disabled.",
+        body: "Necessary local browser storage records whether you accept or reject optional analytics. Google Analytics is not loaded unless you actively accept. You can reopen Privacy choices from the footer and change that decision. Google AdSense advertising and Adsterra remain disabled.",
       },
       {
         title: "Analytics and advertising status",
-        body: "If you accept, this site loads its own Google Analytics 4 web stream to measure page views, navigation, engagement, approximate geography, device and referral information. Google processes this data under its policies. The site does not configure an AdSense publisher, ad slot, or Adsterra placement, and no advertising script is enabled.",
+        body: "If you accept, this site loads its own Google Analytics 4 web stream to measure page views, navigation, engagement, approximate geography, device and referral information. Google processes this data under its policies. A non-executable AdSense account meta tag and account-level ads.txt declaration verify the site for review, but no AdSense advertising script, ad slot, Adsterra placement, or advertising request is enabled.",
       },
       {
         title: "External links",

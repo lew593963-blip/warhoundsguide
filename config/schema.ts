@@ -63,7 +63,15 @@ const analyticsSchema = z.discriminatedUnion("enabled", [
 ]);
 
 const adsenseSchema = z.discriminatedUnion("enabled", [
-  z.object({enabled: z.literal(false)}),
+  z.object({
+    enabled: z.literal(false),
+    siteVerification: z
+      .object({
+        publisherId: z.string().regex(/^ca-pub-\d+$/),
+        metaName: z.literal("google-adsense-account"),
+      })
+      .optional(),
+  }),
   z.object({
     enabled: z.literal(true),
     publisherId: z.string().regex(/^ca-pub-\d+$/),

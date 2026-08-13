@@ -11,7 +11,8 @@ Independent, evidence-led guides for the 2026 turn-based tactical strategy game 
 - Target production domain: `warhoundsguide.online`
 - Production deployment and domain binding: managed as a Warhounds-only release
 - GA4: enabled only after explicit consent, using a Warhounds-only environment variable
-- AdSense and Adsterra: disabled
+- AdSense: site-verification meta plus account-level `ads.txt`; advertising scripts and placements disabled
+- Adsterra: disabled
 
 The public site source includes page-level evidence packs, plans, and SEO briefs under `research/`.
 
