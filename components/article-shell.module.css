@@ -90,6 +90,15 @@
   line-height: 1.65;
 }
 
+.articleGrid {
+  width: min(760px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.articleMain {
+  min-width: 0;
+}
+
 .prose {
   padding-top: 58px;
   color: #c8b7a5;
@@ -267,5 +276,15 @@
 
   .prose h2 {
     margin-top: 58px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .articleGridWithRail {
+    display: grid;
+    width: min(1080px, calc(100% - 48px));
+    grid-template-columns: minmax(0, 760px) 220px;
+    gap: 72px;
+    align-items: start;
   }
 }

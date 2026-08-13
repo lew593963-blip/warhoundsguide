@@ -8,7 +8,7 @@ import type {GuideFrontmatter} from "@/lib/content";
 import {localizePath} from "@/lib/locale-path";
 import {routes} from "@/lib/site";
 
-import {AdsterraNativeBanner} from "./adsterra-native-banner";
+import {AdsterraPlacement} from "./adsterra-placement";
 import styles from "./article-shell.module.css";
 
 type ArticleShellProps = {
@@ -70,20 +70,43 @@ export function ArticleShell({
         </div>
       </div>
 
-      <article className={`page-width page-width--narrow ${styles.prose}`}>
-        {children}
-      </article>
-      {relatedGuides.length > 0 ? (
-        <nav className={`page-width page-width--narrow ${styles.related}`} aria-label="Related guides">
-          <strong>Continue with an evidence-checked guide</strong>
-          <div>
-            {relatedGuides.map((guide) => (
-              <Link key={guide.href} href={guide.href}>{guide.label}</Link>
-            ))}
-          </div>
-        </nav>
+      {adsterra.enabled ? (
+        <AdsterraPlacement
+          placement={adsterra.placements.topLeaderboard}
+          position="leaderboard"
+        />
       ) : null}
-      {adsterra.enabled ? <AdsterraNativeBanner placement={adsterra} /> : null}
+
+      <div
+        className={`${styles.articleGrid} ${adsterra.enabled ? styles.articleGridWithRail : ""}`}
+      >
+        <div className={styles.articleMain}>
+          <article className={styles.prose}>{children}</article>
+          {relatedGuides.length > 0 ? (
+            <nav className={styles.related} aria-label="Related guides">
+              <strong>Continue with an evidence-checked guide</strong>
+              <div>
+                {relatedGuides.map((guide) => (
+                  <Link key={guide.href} href={guide.href}>{guide.label}</Link>
+                ))}
+              </div>
+            </nav>
+          ) : null}
+        </div>
+        {adsterra.enabled ? (
+          <AdsterraPlacement
+            placement={adsterra.placements.desktopRail}
+            position="rail"
+          />
+        ) : null}
+      </div>
+
+      {adsterra.enabled ? (
+        <AdsterraPlacement
+          placement={adsterra.placements.nativeBanner}
+          position="native"
+        />
+      ) : null}
     </main>
   );
 }

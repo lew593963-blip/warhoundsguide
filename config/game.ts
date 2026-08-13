@@ -39,7 +39,7 @@ export const rootConfig = rootConfigSchema.parse({
         privacy: {
           title: "Privacy Policy — Warhounds Guide",
           description:
-            "Read how Warhounds Guide handles hosting logs, consent-gated analytics, browser storage, external links, and disabled advertising.",
+            "Read how Warhounds Guide handles hosting logs, consent-gated analytics and advertising, browser storage, and external links.",
         },
         terms: {
           title: "Terms of Service — Warhounds Guide",
@@ -86,6 +86,64 @@ export const rootConfig = rootConfigSchema.parse({
         metaName: "google-adsense-account",
       },
     },
-    adsterra: {enabled: false},
+    adsterra: {
+      enabled: true,
+      consentRequired: true,
+      placements: {
+        topLeaderboard: {
+          format: "BANNER",
+          unitId: "30725311",
+          scriptId: "adsterra-top-leaderboard",
+          scriptUrl:
+            "https://www.highperformanceformat.com/b937087446c1e7c1343e5af1172ab08b/invoke.js",
+          key: "b937087446c1e7c1343e5af1172ab08b",
+          width: 728,
+          height: 90,
+          viewport: "DESKTOP_ONLY",
+        },
+        inlineBannerOne: {
+          format: "BANNER",
+          unitId: "30725327",
+          scriptId: "adsterra-inline-one",
+          scriptUrl:
+            "https://www.highperformanceformat.com/9b9148a88d27ba3a8f7abc36750426c9/invoke.js",
+          key: "9b9148a88d27ba3a8f7abc36750426c9",
+          width: 300,
+          height: 250,
+          viewport: "ALL",
+        },
+        inlineBannerTwo: {
+          format: "BANNER",
+          unitId: "30725331",
+          scriptId: "adsterra-inline-two",
+          scriptUrl:
+            "https://www.highperformanceformat.com/1ab4dfc4428b6efd8e2fbff73a781498/invoke.js",
+          key: "1ab4dfc4428b6efd8e2fbff73a781498",
+          width: 160,
+          height: 300,
+          viewport: "ALL",
+        },
+        desktopRail: {
+          format: "BANNER",
+          unitId: "30725336",
+          scriptId: "adsterra-desktop-rail",
+          scriptUrl:
+            "https://www.highperformanceformat.com/6ab7e3fb4e065a6314dfdcc6c7fb32c9/invoke.js",
+          key: "6ab7e3fb4e065a6314dfdcc6c7fb32c9",
+          width: 160,
+          height: 600,
+          viewport: "DESKTOP_ONLY",
+        },
+        nativeBanner: {
+          format: "NATIVE_BANNER",
+          unitId: "30725310",
+          scriptId: "adsterra-native-end",
+          scriptUrl:
+            "https://pl30825809.effectivecpmnetwork.com/389268467a2f21966ec62068197d4347/invoke.js",
+          containerId: "container-389268467a2f21966ec62068197d4347",
+          viewport: "ALL",
+        },
+      },
+    },
   },
 });

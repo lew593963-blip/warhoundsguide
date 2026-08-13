@@ -1,0 +1,71 @@
+.placement {
+  width: 100%;
+  min-width: 0;
+  margin-inline: auto;
+  overflow: clip;
+  text-align: center;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  color: #806f60;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.slot {
+  display: grid;
+  width: min(100%, var(--ad-width));
+  min-height: var(--ad-height);
+  margin-inline: auto;
+  overflow: clip;
+  place-items: center;
+}
+
+.slot iframe {
+  display: block;
+  max-width: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.leaderboard {
+  width: min(100% - 48px, 920px);
+  margin-top: 42px;
+}
+
+.inline {
+  margin-block: 68px 24px;
+}
+
+.rail {
+  position: sticky;
+  top: 148px;
+  align-self: start;
+}
+
+.native {
+  width: min(100% - 48px, 760px);
+  margin-top: 54px;
+}
+
+@media (max-width: 1199px) {
+  .leaderboard,
+  .rail {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .inline {
+    margin-block: 52px 18px;
+  }
+
+  .native {
+    width: min(100% - 32px, 760px);
+    margin-top: 44px;
+  }
+}

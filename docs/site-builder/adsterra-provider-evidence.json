@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.1.0",
+  "observed_at": "2026-08-13T08:27:41Z",
+  "website": {
+    "id": "5980025",
+    "domain": "warhoundsguide.online",
+    "category": "Other",
+    "category_reason": "The provider creation form offered no Games category; Other was the accurate available choice.",
+    "adult_ads": false,
+    "review_state": "NOT_DISPLAYED",
+    "operational_evidence": "Five provider-generated ad units are visible with status Active."
+  },
+  "forbidden_formats": {
+    "popunder": false,
+    "smartlink": false,
+    "social_bar": false,
+    "anti_adblock": false,
+    "bottom_adhesion": false
+  },
+  "placements": {
+    "topLeaderboard": {
+      "unit_id": "30725311",
+      "placement_name": "Warhounds Desktop Top Leaderboard",
+      "provider_name": "728x90_1",
+      "provider_state": "Active",
+      "format": "iframe",
+      "key": "b937087446c1e7c1343e5af1172ab08b",
+      "width": 728,
+      "height": 90,
+      "script_url": "https://www.highperformanceformat.com/b937087446c1e7c1343e5af1172ab08b/invoke.js"
+    },
+    "inlineBannerOne": {
+      "unit_id": "30725327",
+      "placement_name": "Warhounds Inline Banner 1",
+      "provider_name": "300x250_1",
+      "provider_state": "Active",
+      "format": "iframe",
+      "key": "9b9148a88d27ba3a8f7abc36750426c9",
+      "width": 300,
+      "height": 250,
+      "script_url": "https://www.highperformanceformat.com/9b9148a88d27ba3a8f7abc36750426c9/invoke.js"
+    },
+    "inlineBannerTwo": {
+      "unit_id": "30725331",
+      "placement_name": "Warhounds Inline Banner 2",
+      "provider_name": "160x300_1",
+      "provider_state": "Active",
+      "format": "iframe",
+      "key": "1ab4dfc4428b6efd8e2fbff73a781498",
+      "width": 160,
+      "height": 300,
+      "script_url": "https://www.highperformanceformat.com/1ab4dfc4428b6efd8e2fbff73a781498/invoke.js"
+    },
+    "desktopRail": {
+      "unit_id": "30725336",
+      "placement_name": "Warhounds Desktop Sticky Rail",
+      "provider_name": "160x600_1",
+      "provider_state": "Active",
+      "format": "iframe",
+      "key": "6ab7e3fb4e065a6314dfdcc6c7fb32c9",
+      "width": 160,
+      "height": 600,
+      "script_url": "https://www.highperformanceformat.com/6ab7e3fb4e065a6314dfdcc6c7fb32c9/invoke.js"
+    },
+    "nativeBanner": {
+      "unit_id": "30725310",
+      "placement_name": "Warhounds Article End Native",
+      "provider_name": "NativeBanner_1",
+      "provider_state": "Active",
+      "container_id": "container-389268467a2f21966ec62068197d4347",
+      "script_url": "https://pl30825809.effectivecpmnetwork.com/389268467a2f21966ec62068197d4347/invoke.js"
+    }
+  }
+}

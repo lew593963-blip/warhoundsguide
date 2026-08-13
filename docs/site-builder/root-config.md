@@ -12,7 +12,9 @@
 - Repository: `https://github.com/lew593963-blip/warhoundsguide`
 - Analytics: enabled behind explicit consent; measurement ID supplied only through `NEXT_PUBLIC_GA_MEASUREMENT_ID`
 - AdSense: non-executable site-verification meta plus account-level `ads.txt`; ad loading disabled
-- Adsterra: disabled
+- Adsterra: enabled only after explicit optional consent on four guide routes; Warhounds website ID `5980025`; five isolated Active units (`30725311`, `30725327`, `30725331`, `30725336`, `30725310`); Banner and Native Banner only
+- Adsterra density: desktop top + two inline + sticky rail + final Native (max 5); mobile/tablet two inline + final Native (max 3)
+- Adsterra intrusive formats: Popunder, Smartlink, Social Bar, Anti-Adblock, bottom adhesion, and Adult Ads disabled
 - Sitemap: config-driven canonical URLs only
 - Robots: allow crawl; target canonical host and sitemap
 - JSON-LD: `WebSite`, `VideoGame`, and per-guide `Article`

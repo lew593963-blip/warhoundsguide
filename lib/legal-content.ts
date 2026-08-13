@@ -16,7 +16,7 @@ export const legalContent: Record<Locale, LegalContent> = {
     updated: "Last updated: August 13, 2026",
     privacyTitle: "Privacy Policy",
     privacyIntro:
-      "This policy explains how the independent Warhounds Guide handles technical delivery, local browser storage, consent-gated analytics, external links, and disabled advertising integrations.",
+      "This policy explains how the independent Warhounds Guide handles technical delivery, local browser storage, consent-gated analytics and advertising, and external links.",
     privacySections: [
       {
         title: "Information collected",
@@ -24,11 +24,11 @@ export const legalContent: Record<Locale, LegalContent> = {
       },
       {
         title: "Browser storage and consent",
-        body: "Necessary local browser storage records whether you accept or reject optional analytics. Google Analytics is not loaded unless you actively accept. You can reopen Privacy choices from the footer and change that decision. Google AdSense advertising and Adsterra remain disabled.",
+        body: "Necessary local browser storage records whether you accept or reject optional analytics and advertising. Google Analytics and Adsterra advertising are not loaded unless you actively accept. You can reopen Privacy choices from the footer and change that decision. Google AdSense ad serving remains disabled while its account review is separate.",
       },
       {
         title: "Analytics and advertising status",
-        body: "If you accept, this site loads its own Google Analytics 4 web stream to measure page views, navigation, engagement, approximate geography, device and referral information. Google processes this data under its policies. A non-executable AdSense account meta tag and account-level ads.txt declaration verify the site for review, but no AdSense advertising script, ad slot, Adsterra placement, or advertising request is enabled.",
+        body: "If you accept, this site loads its own Google Analytics 4 web stream and may load Adsterra Banner or Native Banner placements on guide pages. Those providers may process standard request, device, referral, and approximate location data under their policies. Before acceptance, the site creates no Adsterra provider frame or request. A non-executable AdSense account meta tag and account-level ads.txt declaration remain only for review; no AdSense advertising script or ad slot is enabled.",
       },
       {
         title: "External links",
@@ -53,7 +53,7 @@ export const legalContent: Record<Locale, LegalContent> = {
       },
       {
         title: "External services and future integrations",
-        body: "The site contains external links and optional consent-gated Google Analytics, while advertising integrations remain disabled. Warhounds Guide does not control external content, purchases, accounts, availability, or privacy practices, and a link is not an endorsement.",
+        body: "The site contains external links, optional consent-gated Google Analytics, and consent-gated Adsterra Banner and Native Banner placements on guide pages. Google AdSense ad serving remains disabled. Warhounds Guide does not control external content, ads, purchases, accounts, availability, or privacy practices, and a link is not an endorsement.",
       },
       {
         title: "Changes and contact",
