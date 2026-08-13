@@ -6,11 +6,10 @@ const baseUrl = process.env.QA_BASE_URL ?? "http://127.0.0.1:3100";
 const outputRoot = path.resolve("artifacts/visual-qa");
 const routes = [
   {key: "home", pathname: "/"},
-  {key: "multiplayer", pathname: "/multiplayer"},
-  {key: "rot-sickness", pathname: "/rot-sickness"},
-  {key: "spark-abilities", pathname: "/spark-abilities"},
-  {key: "solo-guide", pathname: "/solo-guide"},
-  {key: "vessels", pathname: "/vessels"},
+  {key: "beginner-guide", pathname: "/beginner-guide"},
+  {key: "squad-guide", pathname: "/squad-guide"},
+  {key: "base-upgrades", pathname: "/base-upgrades"},
+  {key: "weapons-guide", pathname: "/weapons-guide"},
   {key: "about", pathname: "/about"},
   {key: "contact", pathname: "/contact"},
   {key: "privacy", pathname: "/privacy-policy"},
@@ -77,9 +76,7 @@ try {
           scrollWidth: document.documentElement.scrollWidth,
           clientWidth: document.documentElement.clientWidth,
           internalLinks: [...new Set(internalLinks)],
-          retiredBrandPresent: bodyText.toLowerCase().includes(
-            ["sephi", "ria"].join(""),
-          ),
+          unexpectedBrandPresent: !bodyText.toLowerCase().includes("warhounds"),
           metaDescription: document.querySelector('meta[name="description"]')?.getAttribute("content"),
         };
       });
@@ -116,7 +113,7 @@ const failures = results.filter(
     result.consoleErrors.length > 0 ||
     result.pageErrors.length > 0 ||
     result.hasHorizontalOverflow ||
-    result.retiredBrandPresent ||
+    result.unexpectedBrandPresent ||
     !result.hasMain ||
     !result.hasHeader ||
     !result.hasFooter,
