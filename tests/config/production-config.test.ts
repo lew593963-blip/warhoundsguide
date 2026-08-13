@@ -94,6 +94,16 @@ describe("Warhounds production target config", () => {
       candidate.integrations.adsterra.placements.inlineBannerOne.unitId;
 
     expect(rootConfigSchema.safeParse(candidate).success).toBe(false);
+
+    const duplicateScript = mutableConfig();
+    duplicateScript.integrations.adsterra.placements.inlineBannerTwo.scriptId =
+      duplicateScript.integrations.adsterra.placements.inlineBannerOne.scriptId;
+    expect(rootConfigSchema.safeParse(duplicateScript).success).toBe(false);
+
+    const duplicateKey = mutableConfig();
+    duplicateKey.integrations.adsterra.placements.inlineBannerTwo.key =
+      duplicateKey.integrations.adsterra.placements.inlineBannerOne.key;
+    expect(rootConfigSchema.safeParse(duplicateKey).success).toBe(false);
   });
 
   it("rejects insecure Adsterra scripts and incorrect viewport policies", () => {
