@@ -3,8 +3,8 @@
 ## Status and scope
 
 This design adds Adsterra monetization only to the Warhounds site at
-`https://warhoundsguide.online`. It does not modify Sephiria, GRAIN ROT,
-Obsidian, their advertising accounts, or their deployments.
+`https://warhoundsguide.online`. It does not modify any other Factory site,
+knowledge base, advertising account, or deployment.
 
 The Adsterra publisher account is already accessible and contains no Warhounds
 website entry. Warhounds will therefore receive an independent website record
