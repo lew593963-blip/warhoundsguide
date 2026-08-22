@@ -154,3 +154,38 @@ This run stops at `READY_FOR_RELEASE_REVIEW` only after the report-containing Gi
 commit has been pushed and its actual Vercel deployment is confirmed as Preview
 and passes online QA. Formal domain binding, Production deployment, DNS,
 nameservers, Cloudflare, GSC, GA, and Ads remain outside this run.
+
+## 12. August 22 search, indexing, advertising, and favicon release
+
+This section records a later owner-authorized Production optimization release;
+it does not rewrite the historical Preview-only boundary above.
+
+- GSC evidence through August 21: 25 clicks, 345 impressions, 7.2% CTR, and
+  average position 8.8. The strongest observed content opportunity was
+  `warhounds trainer` at 20 impressions and average position 11.5.
+- GA evidence for July 25–August 21: 23 views, 5 active users, 59 events, and no
+  reliable conversion or revenue conclusion because the sample is small.
+- `/trainer-cheats` was added as a single evidence-backed page for overlapping
+  trainer, cheats, and console intent. Unsupported download and command claims
+  remain excluded.
+- The canonical-only sitemap now contains ten public URLs. Robots allows crawl.
+  HTTP and `www` homepage variants remain permanent redirects to the canonical
+  HTTPS apex; those redirect exclusions in GSC are expected, not broken pages.
+- All ten public HTML pages contain consent-gated Adsterra. Desktop guides use
+  five units, mobile guides use three, and Home/About/Contact/Privacy/Terms use
+  one. Adult inventory is permitted and disclosed by site policy, but Adsterra's
+  authenticated `Show adult ads` control is provider-disabled and therefore not
+  represented as active.
+- The favicon is available at the stable URL `/favicon.ico`. Production returns
+  HTTP 200 with `image/vnd.microsoft.icon`, and the homepage declares
+  `<link rel="icon" href="/favicon.ico">`.
+- GitHub PRs: `#2` merged the search/content/advertising release; `#3` merged the
+  stable favicon fix. Web commit: `a33a8b580d335fc15b2fa2fd126d99d80ebc2f7e`.
+- Verified Preview: `dpl_2N9w1WVhwLH1UwvyfLCL2jFe2QUq`, target `preview`,
+  READY, 14 Factory paths passed. Preview ledger SHA-256:
+  `8529d9452104e6336a9d8a5b5a36f5169d6bda45dac0c93a32bcf2afc66e4a4f`.
+- Production: `dpl_JBqFFsnbasihQQa84apAutnaQbwX`, target `production`,
+  READY, canonical alias `https://warhoundsguide.online`.
+- Final verification: 37 tests, lint, typecheck, production build, diff check,
+  14 Preview paths, and 20 Production route/viewport ad checks passed.
+- No DNS, nameserver, or Cloudflare change was made in this release.
