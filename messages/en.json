@@ -11,6 +11,7 @@
     "squadGuide": "Squad & Classes",
     "baseUpgrades": "Base Upgrades",
     "weaponsGuide": "Weapons & Combat",
+    "trainerCheats": "Trainer & Cheats",
     "about": "About",
     "contact": "Contact",
     "menu": "Menu",
@@ -31,8 +32,8 @@
   },
   "start": {
     "eyebrow": "First Guide Cluster",
-    "title": "Four Focused Field Manuals",
-    "description": "The launch library answers high-value player questions without splitting overlapping classes and combat intent into thin pages.",
+    "title": "Five Focused Field Manuals",
+    "description": "The library answers high-value player questions without splitting overlapping classes, combat, trainer, and cheat intent into thin pages.",
     "read": "Read guide",
     "cards": [
       {
@@ -54,6 +55,11 @@
         "number": "4",
         "title": "Weapons & Combat",
         "description": "Choose equipment by job and combine tools, firing lines, destructible cover, high ground, and overwatch."
+      },
+      {
+        "number": "5",
+        "title": "Trainer & Cheats Status",
+        "description": "Check official cheat and console status, third-party trainer compatibility risks, and safer supported alternatives."
       }
     ]
   },

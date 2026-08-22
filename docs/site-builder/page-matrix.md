@@ -1,6 +1,6 @@
 # Warhounds Page Matrix
 
-Observed and sealed August 12, 2026.
+Originally sealed August 12, 2026; search-led update observed August 22, 2026.
 
 | Priority | Query | Route | Disposition | Evidence | Final result | Reason |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -11,5 +11,8 @@ Observed and sealed August 12, 2026.
 | P0 | warhounds weapons guide | `/weapons-guide` | standalone | ready | generated | Distinct equipment intent with broad official combat evidence. |
 | P1 | warhounds mission walkthrough | — | defer | insufficient | not generated | No mission-specific current-build evidence pack was available; creating a walkthrough would be thin or speculative. |
 | P1 | warhounds combat guide | — | merge | ready | merged into `/weapons-guide` | Weapons and combat share the same official evidence and user decision path. |
+| P0 | warhounds trainer / cheats / console commands | `/trainer-cheats` | standalone, consolidated | ready | generated August 22 | GSC recorded 24 combined impressions across trainer/cheat variants, led by `warhounds trainer` at average position 11.5. One page avoids three thin overlapping routes. |
+| P1 | warhounds walkthrough | — | defer | insufficient | not generated | GSC recorded one impression at position 37; current evidence still does not support a mission-by-mission walkthrough. |
+| P1 | warhounds tips | — | merge | ready | merged into `/beginner-guide` | GSC recorded one impression at position 51; the intent is already answered by the substantial beginner guide. |
 
-The first batch contains four guide pages. It deliberately avoids page-count expansion and does not publish the deferred or merged routes.
+The live library now contains five guide pages. The August 22 addition is driven by observed query demand and remains one consolidated page; deferred and merged intents are not expanded merely to increase page count.

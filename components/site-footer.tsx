@@ -37,6 +37,7 @@ export function SiteFooter({
     [routes.squadGuide, nav.squadGuide],
     [routes.baseUpgrades, nav.baseUpgrades],
     [routes.weaponsGuide, nav.weaponsGuide],
+    [routes.trainerCheats, nav.trainerCheats],
   ] as const;
 
   return (

@@ -13,7 +13,7 @@ export type LegalContent = {
 
 export const legalContent: Record<Locale, LegalContent> = {
   en: {
-    updated: "Last updated: August 13, 2026",
+    updated: "Last updated: August 22, 2026",
     privacyTitle: "Privacy Policy",
     privacyIntro:
       "This policy explains how the independent Warhounds Guide handles technical delivery, local browser storage, consent-gated analytics and advertising, and external links.",
@@ -28,7 +28,7 @@ export const legalContent: Record<Locale, LegalContent> = {
       },
       {
         title: "Analytics and advertising status",
-        body: "If you accept, this site loads its own Google Analytics 4 web stream and may load Adsterra Banner or Native Banner placements on guide pages. Those providers may process standard request, device, referral, and approximate location data under their policies. Before acceptance, the site creates no Adsterra provider frame or request. A non-executable AdSense account meta tag and account-level ads.txt declaration remain only for review; no AdSense advertising script or ad slot is enabled.",
+        body: "If you accept, this site loads its own Google Analytics 4 web stream and may load Adsterra Banner or Native Banner placements on public content pages. Adsterra inventory may include mature or adult-oriented creatives where permitted by its provider-side settings. Those providers may process standard request, device, referral, and approximate location data under their policies. Before acceptance, the site creates no Adsterra provider frame or request. A non-executable AdSense account meta tag and account-level ads.txt declaration remain only for review; no AdSense advertising script or ad slot is enabled.",
       },
       {
         title: "External links",
@@ -53,7 +53,7 @@ export const legalContent: Record<Locale, LegalContent> = {
       },
       {
         title: "External services and future integrations",
-        body: "The site contains external links, optional consent-gated Google Analytics, and consent-gated Adsterra Banner and Native Banner placements on guide pages. Google AdSense ad serving remains disabled. Warhounds Guide does not control external content, ads, purchases, accounts, availability, or privacy practices, and a link is not an endorsement.",
+        body: "The site contains external links, optional consent-gated Google Analytics, and consent-gated Adsterra Banner and Native Banner placements on public content pages. Provider inventory may include mature or adult-oriented creatives when enabled by Adsterra. Google AdSense ad serving remains disabled. Warhounds Guide does not control external content, ads, purchases, accounts, availability, or privacy practices, and a link is not an endorsement.",
       },
       {
         title: "Changes and contact",

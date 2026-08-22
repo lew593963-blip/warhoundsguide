@@ -11,7 +11,7 @@ import {contentRegistry} from "@/lib/content-registry";
 import {siteConfig} from "@/lib/site";
 
 describe("canonical indexing and structured data", () => {
-  it("publishes exactly nine canonical English URLs", () => {
+  it("publishes exactly ten canonical English URLs", () => {
     expect(sitemap().map((entry) => entry.url).sort()).toEqual([
       "https://warhoundsguide.online",
       "https://warhoundsguide.online/about",
@@ -21,8 +21,20 @@ describe("canonical indexing and structured data", () => {
       "https://warhoundsguide.online/privacy-policy",
       "https://warhoundsguide.online/squad-guide",
       "https://warhoundsguide.online/terms-of-service",
+      "https://warhoundsguide.online/trainer-cheats",
       "https://warhoundsguide.online/weapons-guide",
     ]);
+  });
+
+  it("uses truthful fixed freshness dates rather than stale or request-time values", () => {
+    const entries = sitemap();
+    const home = entries.find(({url}) => url === "https://warhoundsguide.online");
+    const trainer = entries.find(
+      ({url}) => url === "https://warhoundsguide.online/trainer-cheats",
+    );
+
+    expect(home?.lastModified).toEqual(new Date("2026-08-22T00:00:00.000Z"));
+    expect(trainer?.lastModified).toEqual(new Date("2026-08-22T00:00:00.000Z"));
   });
 
   it("points robots at the target canonical sitemap", () => {

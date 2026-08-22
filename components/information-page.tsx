@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import type {InformationContent} from "@/lib/information";
 
+import {SitePageAd} from "./site-page-ad";
+
 type InformationPageProps = {
   content: InformationContent;
   ctaHref: string;
@@ -34,6 +36,7 @@ export function InformationPage({content, ctaHref, external = false}: Informatio
           </Link>
         )}
       </article>
+      <SitePageAd />
     </main>
   );
 }

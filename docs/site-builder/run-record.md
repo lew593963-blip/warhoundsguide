@@ -30,4 +30,18 @@
 - Preview ledger SHA-256: `156cc01e4062a527b82e66e9660785792a1a58675fea137eb721b2f550304268`.
 - Impressions and revenue: `UNKNOWN` until source-bound provider observations exist.
 
+## Search, indexing, and all-page advertising update — August 22, 2026
+
+- GSC property: `sc-domain:warhoundsguide.online`.
+- Search performance through August 21: 25 clicks, 345 impressions, 7.2% CTR, average position 8.8.
+- Primary observed opportunities: `warhounds guide` (6 clicks, 37 impressions, position 6.5) and `warhounds trainer` (0 clicks, 20 impressions, position 11.5).
+- GA property: `Warhounds Guide` (`p549818152`), web stream measurement ID `G-RY8XD6LH7X`.
+- GA observation for July 25–August 21: 23 views, 5 active users, 59 events; the sample is too small for conversion or revenue conclusions.
+- Indexing snapshot dated August 17: homepage indexed; eight canonical pages were `Discovered – currently not indexed`; the three redirect examples were non-canonical `http/www` homepage variants and remain intentionally redirected.
+- Content action: consolidated trainer, cheats, and console intent into `/trainer-cheats`; no unsupported download or command claims were added.
+- Crawl action: canonical-only sitemap expanded to ten URLs with fixed August 22 freshness on changed pages; robots remains crawlable.
+- Advertising action: all ten public HTML content pages now render consent-gated Adsterra inventory; each guide keeps five desktop / three mobile placements, while Home, About, Contact, Privacy, and Terms receive one inline placement.
+- Adult inventory: allowed by the site policy and disclosed in Privacy/Terms, but not provider-enabled because the authenticated Adsterra website control was disabled. This is an external provider blocker, not represented as completed.
+- Local verification: 37 tests passed; lint, typecheck, production build, `git diff --check`, and 20 route/viewport visual checks passed. Production identity and post-deploy QA are recorded only after the new commit is deployed.
+
 The Factory is the only Site Builder v0.1 executor. This project is an independent materialization from an immutable Game Guide Template source commit. Page content and facts were rebuilt from Warhounds-specific evidence packs.
