@@ -63,7 +63,7 @@ export const rootConfig = rootConfigSchema.parse({
   brand: {
     mark192: "/brand/warhounds-mark.svg",
     mark512: "/brand/warhounds-mark.svg",
-    favicon: "/brand/warhounds-mark.svg",
+    favicon: "/favicon.ico",
     appleIcon: "/brand/warhounds-mark.svg",
     defaultOgImage: "/brand/warhounds-og.svg",
     manifestDescription:

@@ -25,6 +25,7 @@ describe("Warhounds production target config", () => {
     expect(rootConfig.site.url).toBe("https://warhoundsguide.online");
     expect(rootConfig.site.copyright.holder).toBe("Warhounds Guide");
     expect(rootConfig.links.repository).toBe("https://github.com/lew593963-blip/warhoundsguide");
+    expect(rootConfig.brand.favicon).toBe("/favicon.ico");
   });
 
   it("keeps analytics isolated and AdSense serving disabled", () => {
