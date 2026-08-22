@@ -5,6 +5,7 @@ import {
   ExternalLink,
   Gamepad2,
   Shield,
+  ShieldAlert,
   UsersRound,
   Warehouse,
 } from "lucide-react";
@@ -17,13 +18,14 @@ import type {Messages} from "@/lib/messages";
 import {routes} from "@/lib/site";
 
 import styles from "./home-content.module.css";
+import {SitePageAd} from "./site-page-ad";
 
 type HomeContentProps = {
   locale: Locale;
   messages: Messages;
 };
 
-const guideIcons = [Binoculars, UsersRound, Warehouse, Crosshair];
+const guideIcons = [Binoculars, UsersRound, Warehouse, Crosshair, ShieldAlert];
 
 export function HomeContent({messages}: HomeContentProps) {
   const guideRoutes = [
@@ -31,6 +33,7 @@ export function HomeContent({messages}: HomeContentProps) {
     routes.squadGuide,
     routes.baseUpgrades,
     routes.weaponsGuide,
+    routes.trainerCheats,
   ];
 
   return (
@@ -143,6 +146,7 @@ export function HomeContent({messages}: HomeContentProps) {
           </div>
         </div>
       </section>
+      <SitePageAd />
     </main>
   );
 }

@@ -6,6 +6,8 @@ import {contentRegistry} from "@/lib/content-registry";
 import {localizePath} from "@/lib/locale-path";
 import {localizedStaticRoutes, routes} from "@/lib/site";
 
+const STATIC_CONTENT_UPDATED_AT = new Date("2026-08-22T00:00:00.000Z");
+
 function absoluteUrl(pathname: string): string {
   return pathname === "/"
     ? rootConfig.site.url
@@ -18,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const pathname = localizePath(route, locale);
       return {
         url: absoluteUrl(pathname),
-        lastModified: new Date("2026-08-12T00:00:00.000Z"),
+        lastModified: STATIC_CONTENT_UPDATED_AT,
         changeFrequency: route === routes.home ? "weekly" as const : "monthly" as const,
         priority: route === routes.home ? 1 : 0.7,
       };

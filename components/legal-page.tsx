@@ -2,6 +2,8 @@ import Link from "next/link";
 
 import {rootConfig} from "@/config";
 
+import {SitePageAd} from "./site-page-ad";
+
 type LegalSection = {
   title: string;
   body: string;
@@ -38,6 +40,7 @@ export function LegalPage({title, intro, updated, sections, contactHref, contact
           </Link>
         ) : null}
       </article>
+      <SitePageAd />
     </main>
   );
 }

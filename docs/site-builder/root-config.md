@@ -12,10 +12,10 @@
 - Repository: `https://github.com/lew593963-blip/warhoundsguide`
 - Analytics: enabled behind explicit consent; measurement ID supplied only through `NEXT_PUBLIC_GA_MEASUREMENT_ID`
 - AdSense: non-executable site-verification meta plus account-level `ads.txt`; ad loading disabled
-- Adsterra: enabled only after explicit optional consent on four guide routes; Warhounds website ID `5980025`; five isolated Active units (`30725311`, `30725327`, `30725331`, `30725336`, `30725310`); Banner and Native Banner only
-- Adsterra density: desktop top + two inline + sticky rail + final Native (max 5); mobile/tablet two inline + final Native (max 3)
-- Adsterra intrusive formats: Popunder, Smartlink, Social Bar, Anti-Adblock, bottom adhesion, and Adult Ads disabled
-- Sitemap: config-driven canonical URLs only
+- Adsterra: enabled only after explicit optional consent on every public HTML content page; Warhounds website ID `5980025`; five Active units (`30725311`, `30725327`, `30725331`, `30725336`, `30725310`); Banner and Native Banner only
+- Adsterra density: each guide uses desktop top + two inline + sticky rail + final Native (max 5) and mobile/tablet two inline + final Native (max 3); Home, About, Contact, Privacy, and Terms use one all-viewport inline unit
+- Adsterra inventory policy: mature/adult creatives are permitted and disclosed, but the provider-side Adult Ads switch was disabled in the authenticated website panel on August 22, 2026; Popunder, Smartlink, Social Bar, Anti-Adblock, and bottom adhesion remain disabled
+- Sitemap: ten config-driven canonical URLs only, with fixed evidence-backed `lastModified` dates
 - Robots: allow crawl; target canonical host and sitemap
 - JSON-LD: `WebSite`, `VideoGame`, and per-guide `Article`
 - Legal identity: independent fan-made Warhounds Guide; no official affiliation claim

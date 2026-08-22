@@ -10,6 +10,7 @@ const routes = [
   {key: "squad-guide", pathname: "/squad-guide"},
   {key: "base-upgrades", pathname: "/base-upgrades"},
   {key: "weapons-guide", pathname: "/weapons-guide"},
+  {key: "trainer-cheats", pathname: "/trainer-cheats"},
   {key: "about", pathname: "/about"},
   {key: "contact", pathname: "/contact"},
   {key: "privacy", pathname: "/privacy-policy"},

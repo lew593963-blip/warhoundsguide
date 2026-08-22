@@ -13,6 +13,7 @@ export const routes = {
   squadGuide: requireGuideRoute("squad-guide"),
   baseUpgrades: requireGuideRoute("base-upgrades"),
   weaponsGuide: requireGuideRoute("weapons-guide"),
+  trainerCheats: requireGuideRoute("trainer-cheats"),
   about: "/about",
   contact: "/contact",
   privacy: "/privacy-policy",

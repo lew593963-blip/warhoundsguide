@@ -15,6 +15,7 @@ type NavigationRoutes = {
   squadGuide: string;
   baseUpgrades: string;
   weaponsGuide: string;
+  trainerCheats: string;
   about: string;
 };
 
@@ -46,6 +47,7 @@ export function SiteHeader({
     [navigationRoutes.squadGuide, nav.squadGuide],
     [navigationRoutes.baseUpgrades, nav.baseUpgrades],
     [navigationRoutes.weaponsGuide, nav.weaponsGuide],
+    [navigationRoutes.trainerCheats, nav.trainerCheats],
   ] as const;
 
   return (

@@ -14,13 +14,16 @@ const guideRoutes = [
   "/en/squad-guide",
   "/en/base-upgrades",
   "/en/weapons-guide",
+  "/en/trainer-cheats",
 ];
-const zeroAdRoutes = [
+const sitePageAdRoutes = [
   "/en",
   "/en/about",
   "/en/contact",
   "/en/privacy-policy",
   "/en/terms-of-service",
+];
+const zeroAdRoutes = [
   "/en/not-a-real-page",
   "/robots.txt",
   "/sitemap.xml",
@@ -116,16 +119,29 @@ describe("actual Adsterra route composition", () => {
     await context.close();
   });
 
-  it("keeps every non-guide surface free of Adsterra frames", async () => {
+  it("renders one consent-gated placement on every non-guide public content page", async () => {
+    const context = await createContext(1440);
+    const page = await context.newPage();
+
+    for (const route of sitePageAdRoutes) {
+      await page.goto(`${origin}${route}`, {waitUntil: "domcontentloaded"});
+      const frames = page.locator('iframe[title="Advertisement content"]');
+      await expect.poll(() => frames.count()).toBe(1);
+      expect(await frames.first().getAttribute("data-adsterra-unit"), route).toBe(
+        "30725327",
+      );
+    }
+
+    await context.close();
+  });
+
+  it("keeps 404 and non-HTML metadata routes free of Adsterra frames", async () => {
     const context = await createContext(1440);
     const page = await context.newPage();
 
     for (const route of zeroAdRoutes) {
       await page.goto(`${origin}${route}`, {waitUntil: "domcontentloaded"});
-      expect(
-        await page.locator('iframe[title="Advertisement content"]').count(),
-        route,
-      ).toBe(0);
+      expect(await page.locator('iframe[title="Advertisement content"]').count(), route).toBe(0);
     }
 
     await context.close();
