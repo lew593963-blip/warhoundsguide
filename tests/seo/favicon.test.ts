@@ -4,9 +4,9 @@ import {resolve} from "node:path";
 import {describe, expect, it} from "vitest";
 
 describe("favicon asset", () => {
-  it("ships a valid top-level App Router favicon", () => {
+  it("ships a valid stable public favicon for Google Search", () => {
     const favicon = readFileSync(
-      resolve(process.cwd(), "app/favicon.ico"),
+      resolve(process.cwd(), "public/favicon.ico"),
     );
 
     expect([...favicon.subarray(0, 4)]).toEqual([0, 0, 1, 0]);
