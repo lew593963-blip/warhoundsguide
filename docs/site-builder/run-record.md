@@ -11,11 +11,11 @@
 | Human Gate 1 | `GO` |
 | Domain ownership | `CONFIRMED` |
 | Repository visibility | `public` |
-| Production deploy | previously completed; Adsterra change remains unpromoted pending final-SHA Preview verification |
+| Production deploy | `dpl_JBqFFsnbasihQQa84apAutnaQbwX`; READY; exact promoted Preview source commit `a33a8b580d335fc15b2fa2fd126d99d80ebc2f7e` |
 | DNS and domain binding | unchanged; no DNS action in the Adsterra change |
 | GA | consent-gated and enabled |
 | AdSense | site verification only; serving disabled; review pending |
-| Adsterra | website `5980025`; five isolated units Active; consent-gated code and first Preview QA passed; production QA pending |
+| Adsterra | website `5980025`; five isolated units Active; consent-gated placements verified on every public HTML page in Production |
 
 ## Adsterra change record — August 13, 2026
 
@@ -41,7 +41,11 @@
 - Content action: consolidated trainer, cheats, and console intent into `/trainer-cheats`; no unsupported download or command claims were added.
 - Crawl action: canonical-only sitemap expanded to ten URLs with fixed August 22 freshness on changed pages; robots remains crawlable.
 - Advertising action: all ten public HTML content pages now render consent-gated Adsterra inventory; each guide keeps five desktop / three mobile placements, while Home, About, Contact, Privacy, and Terms receive one inline placement.
-- Adult inventory: allowed by the site policy and disclosed in Privacy/Terms, but not provider-enabled because the authenticated Adsterra website control was disabled. This is an external provider blocker, not represented as completed.
-- Local verification: 37 tests passed; lint, typecheck, production build, `git diff --check`, and 20 route/viewport visual checks passed. Production identity and post-deploy QA are recorded only after the new commit is deployed.
+- Adult inventory: allowed by the site policy and disclosed in Privacy/Terms, but not provider-enabled because the authenticated Adsterra website control remains disabled. This is an external provider blocker, not represented as completed.
+- Search favicon: moved from a build-hashed App Router URL to stable `/favicon.ico`; Production returns HTTP 200 with `image/vnd.microsoft.icon` and the homepage declares exactly that stable URL.
+- Verified Preview: `dpl_2N9w1WVhwLH1UwvyfLCL2jFe2QUq`, target `preview`, READY, URL `https://warhoundsguide-pf3txrv0n-lew593963-2025s-projects.vercel.app`; 14 Factory HTTP paths passed. Ledger SHA-256: `8529d9452104e6336a9d8a5b5a36f5169d6bda45dac0c93a32bcf2afc66e4a4f`.
+- Production: `dpl_JBqFFsnbasihQQa84apAutnaQbwX`, target `production`, READY, URL `https://warhoundsguide-kmnf5u77g-lew593963-2025s-projects.vercel.app`; aliases include `https://warhoundsguide.online` and `https://www.warhoundsguide.online`.
+- Production QA: all ten public routes returned 200 with exact canonical URLs and no horizontal overflow. With consent granted, desktop guides loaded five units, mobile guides loaded three, and Home/About/Contact/Privacy/Terms loaded one unit. Redirect variants remain intentional canonical-host redirects.
+- Local verification: 37 tests passed; lint, typecheck, production build, and `git diff --check` passed.
 
 The Factory is the only Site Builder v0.1 executor. This project is an independent materialization from an immutable Game Guide Template source commit. Page content and facts were rebuilt from Warhounds-specific evidence packs.
